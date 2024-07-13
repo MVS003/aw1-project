@@ -1,60 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: black;
+    background: linear-gradient(to left, #050414, #2927a2);
+
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.a{
-    background-color: red;
-    width: 850px;
-    height: 500px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.b{
-    background-color: gray;
-    width: 400px;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
     
 }
 
-.c{
-    background-color: darkmagenta;
+.fundo{
+    background-color:#170b23;
+    width: 850px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /*
+    .main-login{
+        width: 100vw;
+        height: 100vh;
+    }*/
+}
+
+.cadastro{
+    background-color: #3f1e60b7;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    box-shadow: 0px 10px 40px -12px #000000;
+}
+
+.campos-direita{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+}
+
+.campos{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+}
+
+.campos-direita> h1{
+    font-size: 25pt;
+    color: #3232C8;
+    font-weight: 600;
+    margin: 0;
+}
+
+.campos-direita> h2{
+    color: #3232C8;
+    margin: 0;
+}
+
+.campos-direita> .titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 200px;
+    margin: auto;
+    color: #3232C8;
+}
+
+.esquerda{
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+}
+
+.direita{
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 380px;
     height: 140px;
     margin: auto;
+    font-size: 15pt;
+    color: #3232C8;
 }
 
-.d{
-    background-color: darkmagenta;
+.sucesso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 380px;
+    height: 140px;
+    margin: auto;
+    font-size: 15pt;
+    color: #3232C8;
+}
+
+.img-login{
+    width: 300px;
     height: 300px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.e{
-    background-color: blueviolet;
-    width: 350px;
-    height: 380px;
+@keyframes fluxo {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    95% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    animation: fluxo 10s infinite;
+}
+  
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.login{
+    background-color: #3f1e60b7;
+    width: 80%;
     margin: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding: 30px 35px;
+    box-shadow: 0px 10px 40px -12px #000000;
 }
+
+.login> h1{
+    font-size: 32pt;
+    color: #3232C8;
+    font-weight: 600;
+    margin: 0;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.campo > p{
+    margin-bottom: 10px;
+    color: #ffffffbd;
+}
+
+.campo > input{
+    width: 100%;
+    border-radius: 20px;
+    background-color: #56446c;
+    border: none;
+    padding: 15px;
+    box-shadow: 0px 10px 40px -12px #000000;
+    box-sizing: border-box;
+    color: #ffffff7c;
+}
+
+.campo > input::placeholder{
+    color: #ffffff7c;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #3232c8;
+    opacity: 0.5;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 25px;
+    box-shadow: 0px 10px 40px -12px #000000 ;
+}
+
+.btn-login:hover{
+   opacity: 1;
+   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        background: linear-gradient(to top , #050414, #2927a2);
+        height: 110vh;
+    }
+
+    .fundo{
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+
+    .cadastro{
+        background-color: #00000000;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .campos{
+        padding: 0px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .campos-direita{
+        padding: 0px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .campos-direita> .titulo{
+        display: none;
+    }
+    
+
+    .esquerda{
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo{
+        display: none;
+    }
+
+    .img-login{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .direita{
+        width: 100%;
+        height: auto;
+    }
+
+    .login{
+        width: 85%;
+    }
+} 
